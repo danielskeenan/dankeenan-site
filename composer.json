@@ -1,15 +1,33 @@
 {
     "name": "dragoonboots/dankeenan-site",
     "description": "dankeenan.org website",
-    "minimum-stability": "dev",
+    "type": "project",
     "license": "proprietary",
     "authors": [
         {
             "name": "Dan Keenan",
-            "email": "dk@dankeenan.org"
+            "email": "dk@dankeenan.org",
+            "homepage": "http://dankeenan.org"
         }
     ],
     "require": {
-        "sculpin/sculpin": "^3.0@dev"
+        "php": "7.2",
+        "ext-iconv": "*",
+        "sculpin/sculpin": "^2.1@dev",
+        "dflydev/embedded-composer": "^1.0@dev",
+        "kriswallsmith/assetic": "1.1.2"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "ComponentManager\\ComponentManager::postComposerInstall"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "DragoonBoots\\DanKeenanBundle\\": "app/bundles/DanKeenanBundle"
+        },
+        "classmap": [
+            "component-manager.php"
+        ]
     }
 }

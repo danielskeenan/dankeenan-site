@@ -1,0 +1,6 @@
+sculpin_content_types:
+    posts:
+        enabled: false
+    pages:
+        type: path
+        permalink: ':slug_title.html'

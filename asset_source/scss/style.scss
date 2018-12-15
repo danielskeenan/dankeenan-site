@@ -1,0 +1,13 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    position: relative;
+}
+
+main {
+    padding-top: $navbar-brand-height + (4*$navbar-padding-y);
+}
+
+iframe.pdf {
+    min-height: 600px;
+}

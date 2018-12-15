@@ -5,9 +5,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         {% block head_meta %}
-            <meta name="robots" content="noindex, follow">
         {% endblock %}
-        <link href="{{ site.url }}/assets/style.css" rel="stylesheet" type="text/css" />
+        <link href="{{ site.url }}/assets/style.css" rel="stylesheet" type="text/css">
+        <link href="{{ site.url }}/assets/static/favicon.png" rel="shortcut icon">
 
         {% block head_styles %}
         {% endblock %}
@@ -18,7 +18,10 @@
         <header>
             <nav id="nav-main" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                 <div class="container">
-                    <a class="navbar-brand" href="{{ site.url }}/">{{ site.title }}</a>
+                    <a class="navbar-brand" href="{{ site.url }}/">
+                        {#<img class="logo" src="assets/static/logo.png" alt="">#}
+                        {{ site.title }}
+                    </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

@@ -1,11 +1,20 @@
+$body-color: #DDD;
+$link-color: #EEE;
+
 @import "~bootstrap/scss/bootstrap";
 
 body {
     position: relative;
+    background-image: url("/assets/static/bg_hidpi.jpg");
+    background-size: cover;
 }
 
 main {
     padding-top: $navbar-brand-height + (4*$navbar-padding-y);
+}
+
+.navbar .logo {
+    height: $navbar-brand-height;
 }
 
 iframe.pdf {

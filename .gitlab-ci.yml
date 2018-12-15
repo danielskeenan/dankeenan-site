@@ -9,6 +9,9 @@ assets:
   cache:
     paths:
       - node_modules
+  artifacts:
+    untracked: true
+    expire_in: 1 day
   script:
     - yarn install
     - yarn run prod
@@ -19,6 +22,9 @@ content:
   cache:
     paths:
       - vendor
+  artifacts:
+    untracked: true
+    expire_in: 1 day
   script:
     - composer install
     - php vendor/bin/sculpin generate -e prod

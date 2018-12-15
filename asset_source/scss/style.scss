@@ -12,9 +12,9 @@ body {
         background-image: url("/assets/static/bg_hidpi.jpg");
     }
     background-color: #020109;
-    background-size: contain;
+    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: left $navbar-room - $spacer;
+    background-position: center $navbar-room - $spacer;
 }
 
 main {

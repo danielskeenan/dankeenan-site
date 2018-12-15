@@ -1,0 +1,15 @@
+{
+    "name": "dragoonboots/dankeenan-site",
+    "description": "dankeenan.org website",
+    "minimum-stability": "dev",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Dan Keenan",
+            "email": "dk@dankeenan.org"
+        }
+    ],
+    "require": {
+        "sculpin/sculpin": "^3.0@dev"
+    }
+}

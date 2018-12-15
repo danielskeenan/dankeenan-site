@@ -6,6 +6,9 @@ stages:
 assets:
   image: node
   stage: build_assets
+  cache:
+    paths:
+      - node_modules
   script:
     - yarn install
     - yarn run prod
@@ -13,11 +16,15 @@ assets:
 content:
   image: composer
   stage: build_content
+  cache:
+    paths:
+      - vendor
   script:
     - composer install
     - php vendor/bin/sculpin generate -e prod
 
 pages:
+  image: alpine
   stage: deploy
   script:
     - mv output_prod public

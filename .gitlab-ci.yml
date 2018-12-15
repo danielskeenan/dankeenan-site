@@ -10,7 +10,8 @@ assets:
     paths:
       - node_modules
   artifacts:
-    untracked: true
+    paths:
+      - source
     expire_in: 1 day
   script:
     - yarn install
@@ -23,7 +24,8 @@ content:
     paths:
       - vendor
   artifacts:
-    untracked: true
+    paths:
+      - output_prod
     expire_in: 1 day
   script:
     - composer install

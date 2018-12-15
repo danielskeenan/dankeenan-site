@@ -1,0 +1,28 @@
+stages:
+  - build_assets
+  - build_content
+  - deploy
+
+assets:
+  image: node
+  stage: build_assets
+  script:
+    - yarn install
+    - yarn run prod
+
+content:
+  image: composer
+  stage: build_content
+  script:
+    - composer install
+    - php vendor/bin/sculpin generate -e prod
+
+pages:
+  stage: deploy
+  script:
+    - mv output_prod public
+  artifacts:
+    paths:
+      - public
+  only:
+    - new-master

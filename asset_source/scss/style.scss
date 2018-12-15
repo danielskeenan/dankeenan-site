@@ -3,14 +3,22 @@ $link-color: #EEE;
 
 @import "~bootstrap/scss/bootstrap";
 
+$navbar-room: $navbar-brand-height + (4*$navbar-padding-y);
+
 body {
     position: relative;
-    background-image: url("/assets/static/bg_hidpi.jpg");
-    background-size: cover;
+    background-image: url("/assets/static/bg.jpg");
+    @media (min-width: 1281px) {
+        background-image: url("/assets/static/bg_hidpi.jpg");
+    }
+    background-color: #020109;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left $navbar-room - $spacer;
 }
 
 main {
-    padding-top: $navbar-brand-height + (4*$navbar-padding-y);
+    padding-top: $navbar-room;
 }
 
 .navbar .logo {
@@ -19,4 +27,13 @@ main {
 
 iframe.pdf {
     min-height: 600px;
+}
+
+article {
+    padding: $spacer;
+    margin-bottom: $spacer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: #000000;
+    border-width: 1rem;
+    border-radius: 1rem;
 }

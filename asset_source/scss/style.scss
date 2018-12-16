@@ -14,6 +14,9 @@ body {
     background-attachment: fixed;
     background-color: #020109;  // This is the darkest color at the bottom of the image.
     background-size: 100% auto;
+    @media (orientation: portrait) {
+        background-size: cover;
+    }
     background-repeat: no-repeat;
     background-position: center top;
 }

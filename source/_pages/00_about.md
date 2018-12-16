@@ -1,5 +1,6 @@
 ---
 title: About me
+slug: about
 
 ---
 Dan Keenan is an entertainment electrician based in New York City.

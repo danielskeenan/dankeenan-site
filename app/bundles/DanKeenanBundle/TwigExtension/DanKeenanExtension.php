@@ -68,7 +68,6 @@ class DanKeenanExtension extends \Twig_Extension
     private function slugifyString(string $title, string $space)
     {
         $title = trim($title);
-        $title = iconv('utf-8', 'us-ascii//TRANSLIT', $title);
         $title = preg_replace('`[^a-zA-Z0-9\s'.preg_quote($space, '`').']`', '', $title);
         $title = strtolower($title);
         $title = preg_replace('`[\s.'.preg_quote($space, '`').']+`', $space, $title);

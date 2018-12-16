@@ -12,7 +12,6 @@
     ],
     "require": {
         "php": "7.2.*",
-        "ext-iconv": "*",
         "sculpin/sculpin": "^2.1@dev",
         "dflydev/embedded-composer": "^1.0@dev",
         "kriswallsmith/assetic": "1.1.2"

@@ -28,6 +28,7 @@ content:
       - output_prod
     expire_in: 1 day
   script:
+    - docker-php-ext-install -j$(nproc) iconv
     - composer install
     - php vendor/bin/sculpin generate -e prod
 

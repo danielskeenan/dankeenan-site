@@ -11,10 +11,11 @@ body {
     @media (min-width: 1281px) {
         background-image: url("/assets/static/bg_hidpi.jpg");
     }
-    background-color: #020109;
+    background-attachment: fixed;
+    background-color: #020109;  // This is the darkest color at the bottom of the image.
     background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: center $navbar-room - $spacer;
+    background-position: center top;
 }
 
 main {

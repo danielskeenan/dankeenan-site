@@ -1,0 +1,48 @@
+stages:
+  - build_assets
+  - build_content
+  - deploy
+
+variables:
+  OUTPUT_DIR: output_prod
+
+assets:
+  image: node:10
+  stage: build_assets
+  cache:
+    paths:
+      - node_modules
+  artifacts:
+    paths:
+      - source/build
+    expire_in: 1 day
+  script:
+    - yarn install --frozen-lockfile --non-interactive
+    - yarn run build
+
+content:
+  image: composer:1.8
+  stage: build_content
+  cache:
+    paths:
+      - output_prod
+      - vendor
+  artifacts:
+    paths:
+      - output_prod
+    expire_in: 1 day
+  script:
+    - composer install --prefer-dist --no-dev --no-suggest --optimize-autoloader --no-interaction
+    - vendor/bin/sculpin generate --clean -e prod --output-dir=${OUTPUT_DIR} --no-interaction
+    - rm -R ${OUTPUT_DIR}/assets
+
+pages:
+  image: alpine:3.9
+  stage: deploy
+  script:
+    - mv ${OUTPUT_DIR} public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

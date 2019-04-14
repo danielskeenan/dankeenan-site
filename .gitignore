@@ -6,7 +6,7 @@
 /output_*/
 /source/components/
 s3.conf
-/source/assets/
+/source/build
 
 ### Composer template
 composer.phar

@@ -10,6 +10,7 @@ slug: resume
         Download
     </a>
 </p>
-<iframe class="pdf embed-responsive" src="{{ resume_url }}.pdf" width="100%" height="100%">
-    <img src="{{ resume_url }}.png">
+<iframe class="pdf embed-responsive d-none d-lg-block" src="{{ resume_url }}.pdf" width="100%" height="100%">
+    <a href="{{ resume_url }}.pdf"><img src="{{ resume_url }}.png" class="w-100"></a>
 </iframe>
+<a href="{{ resume_url }}.pdf"><img src="{{ resume_url }}.png" class="d-block d-lg-none w-100"></a>

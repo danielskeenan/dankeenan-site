@@ -1,0 +1,4 @@
+services:
+  DragoonBoots\DanKeenanSiteBundle\TwigExtension\DanKeenanExtension:
+    tags:
+      - name: twig.extension

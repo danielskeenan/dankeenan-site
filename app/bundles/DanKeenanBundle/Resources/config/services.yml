@@ -1,5 +1,0 @@
-services:
-  twig.dankeenan:
-    class: 'DragoonBoots\DanKeenanBundle\TwigExtension\DanKeenanExtension'
-    tags:
-      - name: twig.extension

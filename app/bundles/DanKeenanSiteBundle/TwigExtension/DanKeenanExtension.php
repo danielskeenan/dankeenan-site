@@ -1,10 +1,16 @@
 <?php
 
-namespace DragoonBoots\DanKeenanBundle\TwigExtension;
+namespace DragoonBoots\DanKeenanSiteBundle\TwigExtension;
 
 use Sculpin\Contrib\ProxySourceCollection\ProxySourceItem;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
+use UnexpectedValueException;
 
-class DanKeenanExtension extends \Twig_Extension
+/**
+ * Template helpers
+ */
+class DanKeenanExtension extends AbstractExtension
 {
 
     /**
@@ -13,7 +19,7 @@ class DanKeenanExtension extends \Twig_Extension
     public function getFilters()
     {
         return [
-            new \Twig_SimpleFilter('slugify', [$this, 'slugify']),
+            new TwigFilter('slugify', [$this, 'slugify']),
         ];
     }
 
@@ -29,14 +35,16 @@ class DanKeenanExtension extends \Twig_Extension
      *
      * @return string|null
      *
-     * @throws \UnexpectedValueException
+     * @throws UnexpectedValueException
      *   Thrown when $item is not a string or ProxySourceItem
      */
     public function slugify($item, string $space = '-'): ?string
     {
-        if (is_null($item)) {
+        if ($item === null) {
             return null;
-        } elseif (is_a($item, ProxySourceItem::class)) {
+        }
+
+        if ($item instanceof ProxySourceItem) {
             // Use the user-defined slug first, otherwise build one the same way
             // the permalink factory does.
             $slug = $item->data()->get('slug');
@@ -50,7 +58,7 @@ class DanKeenanExtension extends \Twig_Extension
             if ($itemType === 'object') {
                 $itemType = get_class($item);
             }
-            throw new \UnexpectedValueException(sprintf('Item passed to slugify filter must be a ProxySourceItem or a string, "%s" passed instead,', $itemType));
+            throw new UnexpectedValueException(sprintf('Item passed to slugify filter must be a ProxySourceItem or a string, "%s" passed instead,', $itemType));
         }
 
         return $slug;
@@ -65,7 +73,7 @@ class DanKeenanExtension extends \Twig_Extension
      *
      * @return string
      */
-    private function slugifyString(string $title, string $space)
+    private function slugifyString(string $title, string $space): string
     {
         $title = trim($title);
         $title = preg_replace('`[^a-zA-Z0-9\s'.preg_quote($space, '`').']`', '', $title);

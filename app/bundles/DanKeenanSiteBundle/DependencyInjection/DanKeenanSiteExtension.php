@@ -1,15 +1,16 @@
 <?php
 
-
-namespace DragoonBoots\DanKeenanBundle\DependencyInjection;
-
+namespace DragoonBoots\DanKeenanSiteBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
-class DragoonBootsDanKeenanExtension extends Extension
+/**
+ * Class DanKeenanSiteExtension
+ */
+class DanKeenanSiteExtension extends Extension
 {
 
     /**

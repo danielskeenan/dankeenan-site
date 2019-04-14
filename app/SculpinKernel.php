@@ -1,5 +1,6 @@
 <?php
 
+use DragoonBoots\DanKeenanSiteBundle\DanKeenanSiteBundle;
 use Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKernel;
 
 /**
@@ -7,14 +8,10 @@ use Sculpin\Bundle\SculpinBundle\HttpKernel\AbstractKernel;
  */
 class SculpinKernel extends AbstractKernel
 {
-
-    /**
-     * {@inheritdoc}
-     */
-    protected function getAdditionalSculpinBundles()
+    protected function getAdditionalSculpinBundles(): array
     {
         return [
-            DragoonBoots\DanKeenanBundle\DragoonBootsDanKeenanBundle::class,
+            DanKeenanSiteBundle::class,
         ];
     }
 }

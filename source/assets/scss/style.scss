@@ -2,6 +2,8 @@ $body-color: #DDD;
 $link-color: #EEE;
 
 @import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
 
 $navbar-room: $navbar-brand-height + (4*$navbar-padding-y);
 
@@ -41,7 +43,7 @@ article {
     border-width: 1rem;
     border-radius: 1rem;
 
-    p a {
+    p a:not(.btn) {
         text-decoration: underline;
     }
 }

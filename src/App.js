@@ -14,7 +14,7 @@ function Header(props) {
         <Nav.Link key={anchor} href={`#${anchor}`}>{text}</Nav.Link>);
 
     return (
-        <Navbar variant="dark" bg="dark" fixed="top">
+        <Navbar variant="dark" bg="dark" expand="md" fixed="top">
             <Navbar.Brand href="#top">Dan Keenan</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">

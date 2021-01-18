@@ -1,17 +1,49 @@
 {
-  "license": "proprietary",
+  "name": "dankeenan-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "bootstrap": "^4.5.3",
+    "bootstrap-icons": "^1.3.0",
+    "marked": "^1.2.7",
+    "popper.js": "^1.16.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "react-snapshot": "^1.3.0",
+    "sass": "^1.32.4",
+    "sass-loader": "^10.1.1"
+  },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.8.1",
-    "@symfony/webpack-encore": "^0.27.0",
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.4.0",
-    "node-sass": "^4.11.0",
-    "popper.js": "^1.15.0",
-    "sass-loader": "^7.1.0"
+    "cli-real-favicon": "^0.0.8"
   },
   "scripts": {
-    "dev": "encore dev",
-    "watch": "encore dev --watch",
-    "build": "encore production --progress"
+    "start": "react-scripts start",
+    "build": "react-scripts build && react-snapshot",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "favicons": "real-favicon generate faviconDescription.json faviconData.json public"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

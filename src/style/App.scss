@@ -1,0 +1,44 @@
+$body-color: #DDD;
+$link-color: #EEE;
+
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+$navbar-room: $navbar-brand-height + (4*$navbar-padding-y);
+
+body {
+  position: relative;
+  background-image: url("./bg.jpg");
+  @media (min-width: 1281px) {
+    background-image: url("./bg_hidpi.jpg");
+  }
+  background-attachment: fixed;
+  background-color: #020109; // This is the darkest color at the bottom of the image.
+  background-size: 100% auto;
+  @media (orientation: portrait) {
+    background-size: cover;
+  }
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.navbar .logo {
+  height: $navbar-brand-height;
+}
+
+main {
+  padding-top: $navbar-room;
+}
+
+article {
+  padding: $spacer;
+  margin-bottom: $spacer;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: #000000;
+  border-width: 1rem;
+  border-radius: 1rem;
+
+  p a:not(.btn) {
+    text-decoration: underline;
+  }
+}

@@ -57,7 +57,7 @@ function App() {
                         <h2>{links.resume}</h2>
                         <p>
                             <Button variant="secondary" href={resume_pdf}>
-                                <i className="bi-download"/> Download
+                                <i className="bi-download"/>&nbsp;Download
                             </Button>
                         </p>
                         <ResponsiveEmbed className="pdf d-none d-lg-block">
@@ -72,8 +72,11 @@ function App() {
                         <h2>Contact</h2>
                         <p>
                             I'm trying to avoid bad robots scraping the internet for email addresses, so find my email
-                            here: <a target="_blank" rel="noreferrer"
-                                     href="https://mailhide.io/e/Iflybwh4">https://mailhide.io/e/Iflybwh4</a>
+                            here:&nbsp;
+                            <Button variant="secondary" href="https://mailhide.io/e/Iflybwh4" target="_blank"
+                                    rel="noreferrer" role="link">
+                                <i className="bi-envelope"/>&nbsp;E-Mail
+                            </Button>
                         </p>
                     </article>
                 </main>

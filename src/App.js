@@ -72,7 +72,7 @@ function App() {
                         <h2>Contact</h2>
                         <p>
                             I'm trying to avoid bad robots scraping the internet for email addresses, so find my email
-                            here: <a target="_blank"
+                            here: <a target="_blank" rel="noreferrer"
                                      href="https://mailhide.io/e/Iflybwh4">https://mailhide.io/e/Iflybwh4</a>
                         </p>
                     </article>

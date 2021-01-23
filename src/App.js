@@ -35,17 +35,12 @@ function App() {
                     <article id="about_me">
                         <header><h2>{links.about_me}</h2></header>
                         <p>
-                            Hi! I'm Dan Keenan, an entertainment electrician based in New York City.
+                            Hi! I'm Dan Keenan, an entertainment lighting technician
+                            and <a href="https://github.com/DragoonBoots">software developer</a> based in New York City.
                         </p>
 
                         <p>
-                            I enjoy exploring the intersection between the entertainment industry and emerging
-                            technologies.
-                        </p>
-
-                        <p>
-                            I also work as a freelance and open source developer using a variety of technologies - see
-                            some of my projects on <a href="https://github.com/DragoonBoots">GitHub</a>.
+                            I enjoy exploring the intersection between entertainment and emerging technologies.
                         </p>
 
                         <p>

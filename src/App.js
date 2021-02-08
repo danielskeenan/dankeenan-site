@@ -35,8 +35,8 @@ function App() {
                     <article id="about_me">
                         <header><h2>{links.about_me}</h2></header>
                         <p>
-                            Hi! I'm Dan Keenan, an entertainment lighting technician
-                            and <a href="https://github.com/DragoonBoots">software developer</a> based in New York City.
+                            Hi! I'm Dan Keenan, a <a href="https://github.com/danielskeenan">software
+                            developer</a> based in New York City.
                         </p>
 
                         <p>

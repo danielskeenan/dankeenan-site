@@ -15,13 +15,15 @@ function Header(props) {
 
     return (
         <Navbar variant="dark" bg="dark" expand="md" fixed="top">
-            <Navbar.Brand href="#top">Dan Keenan</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="mr-auto">
-                    {nav_links}
-                </Nav>
-            </Navbar.Collapse>
+            <Container>
+                <Navbar.Brand href="#top">Dan Keenan</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="mr-auto">
+                        {nav_links}
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
         </Navbar>
     );
 }

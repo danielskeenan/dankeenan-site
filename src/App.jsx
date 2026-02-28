@@ -52,7 +52,7 @@ function App() {
                         <h2>{links.resume}</h2>
                         <p>
                             <Button variant="secondary" href={resume_pdf}>
-                                <i className="bi-download"/>&nbsp;Download
+                                <i className="bi bi-download"/>&nbsp;Download
                             </Button>
                         </p>
                         <Ratio className="pdf d-none d-lg-block">
@@ -70,7 +70,7 @@ function App() {
                             here:&nbsp;
                             <Button variant="secondary" href="https://mailhide.io/e/Iflybwh4" target="_blank"
                                     rel="noreferrer" role="link">
-                                <i className="bi-envelope"/>&nbsp;E-Mail
+                                <i className="bi bi-envelope"/>&nbsp;E-Mail
                             </Button>
                         </p>
                     </article>

@@ -2,7 +2,7 @@ $body-color: #DDD;
 $link-color: #EEE;
 
 @import "bootstrap/scss/bootstrap";
-@import "bootstrap-icons/font/bootstrap-icons";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 $navbar-room: $navbar-brand-height + (4*$navbar-padding-y);
 

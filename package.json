@@ -13,11 +13,12 @@
     "vite": "^7.3.1"
   },
   "devDependencies": {
-    "cli-real-favicon": "^0.0.8"
+    "cli-real-favicon": "^0.0.8",
+    "vite-react-ssg": "^0.9.1-beta.1"
   },
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "vite-react-ssg build",
     "serve": "vite preview",
     "favicons": "real-favicon generate faviconDescription.json faviconData.json public"
   },

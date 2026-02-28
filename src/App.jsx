@@ -1,5 +1,5 @@
 import './style/App.scss';
-import {Button, Container, Nav, Navbar, ResponsiveEmbed} from "react-bootstrap";
+import {Button, Container, Nav, Navbar, Ratio} from "react-bootstrap";
 import resume_pdf from "./static/Dan Keenan Resume web.pdf";
 import resume_image from "./static/Dan Keenan Resume web.png";
 
@@ -55,11 +55,11 @@ function App() {
                                 <i className="bi-download"/>&nbsp;Download
                             </Button>
                         </p>
-                        <ResponsiveEmbed className="pdf d-none d-lg-block">
+                        <Ratio className="pdf d-none d-lg-block">
                             <iframe src={resume_pdf} title={links.resume}>
                                 <a href={resume_pdf}><img src={resume_image} className="w-100" alt=""/></a>
                             </iframe>
-                        </ResponsiveEmbed>
+                        </Ratio>
                         <a href={resume_pdf}><img src={resume_image} className="d-block d-lg-none w-100" alt=""/></a>
                     </article>
 

@@ -1,7 +1,7 @@
 import './style/App.scss';
 import {Button, Container, Nav, Navbar, Ratio} from "react-bootstrap";
-import resume_pdf from "./static/Dan Keenan Resume web.pdf";
-import resume_image from "./static/Dan Keenan Resume web.png";
+import resume_pdf from "./static/Dan Keenan Resume.pdf";
+import resume_image from "./static/Dan Keenan Resume.png";
 
 const links = {
     about_me: 'About me',
